@@ -8,17 +8,17 @@
     "cover": "https://upload.wikimedia.org/wikipedia/pt/4/4b/LedZeppelinIV.jpg"
   },
   "song2": {
-    "artist": "Panic at the Disco",
+    "artist": "Panic! At the Disco",
     "album": "A Fever You Can't Sweat Out",
     "year": 2006,
-    "name": "I write sins not tragedies",
+    "name": "I Write Sins Not Tragedies",
     "rating": 3.8,
     "cover": "https://upload.wikimedia.org/wikipedia/en/1/16/Panic%21_at_the_Disco_-_I_Write_Sins_Not_Tragedies.png"
   },
   "song3": {
     "artist": "Touché Amoré",
-    "album": "Is survived by",
-    "year": 2019,
+    "album": "Is Survived by",
+    "year": 2014,
     "name": "DNA",
     "rating": 4.2,
     "cover": "https://landoftreason.co.uk/wp-content/uploads/2020/07/touche-amore-is-survived.jpg"
