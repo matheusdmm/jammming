@@ -1,45 +1,21 @@
 import { useState } from 'react';
 import SearchBar from './SearchBar';
+import FakeData from '../mock/FakeData.json';
 
-const useSongs = () => {
-  const [songs, setSongs] = useState({
-    song1: {
-      artist: 'Artist 1',
-      album: 'Album 1',
-      year: 2021,
-      name: 'Song 1',
-      rating: 4.5,
-      cover: 'https://picsum.photos/200',
-    },
-    song2: {
-      artist: 'Artist 2',
-      album: 'Album 2',
-      year: 2020,
-      name: 'Song 2',
-      rating: 3.8,
-      cover: 'https://picsum.photos/200',
-    },
-    song3: {
-      artist: 'Artist 3',
-      album: 'Album 3',
-      year: 2019,
-      name: 'Song 3',
-      rating: 4.2,
-      cover: 'https://picsum.photos/200',
-    },
-  });
-
+const useSongs = (t) => {
+  const [songs, setSongs] = useState(FakeData);
   return songs;
 };
 
 export default function Playlist({ songList, setSongList }) {
   const songs = useSongs();
-
   const [filteredSongs, setFilteredSongs] = useState(songs);
 
   const handleSearch = (query) => {
-    const filtered = Object.values(songs).filter((song) =>
-      song.name.toLowerCase().includes(query.toLowerCase())
+    const filtered = Object.values(songs).filter(
+      (song) =>
+        song.name.toLowerCase().includes(query.toLowerCase()) ||
+        song.artist.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredSongs(filtered);
   };
@@ -60,7 +36,7 @@ export default function Playlist({ songList, setSongList }) {
               <div class="w-1/2 text-right">
                 <span class="text-gray-500">{song.year}</span>
                 <span class="text-gray-500 ml-4">{song.rating}</span>
-                <span class="text-gray-500 ml-2">➕🎶</span>
+                <button class="text-gray-500 ml-2">➕🎶</button>
               </div>
             </div>
           </li>

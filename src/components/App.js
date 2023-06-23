@@ -4,7 +4,7 @@ import Header from './Header';
 
 function App() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-pink-200">
       <Header title="Jammming" />
 
       <Playlist />
